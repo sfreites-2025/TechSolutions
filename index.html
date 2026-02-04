@@ -200,7 +200,7 @@
         </div>
     </section>
 
-    <!-- Sección Contacto -->
+        <!-- Sección Contacto -->
     <section id="contacto" class="contact">
         <div class="container">
             <h2 class="section-title">¿Listo para digitalizar tu negocio?</h2>
@@ -213,39 +213,162 @@
                         <i class="fas fa-laptop-code"></i>
                     </div>
                     <h3>Quiero digitalizar mi negocio</h3>
-                    <form class="contact-form" id="form-digital">
+                    <form class="contact-form" 
+                          id="form-digital" 
+                          action="https://formspree.io/f/TU-CODIGO-DIGITAL-AQUI" 
+                          method="POST">
+                        
+                        <!-- Campos ocultos para Formspree -->
+                        <input type="hidden" name="_subject" value="🚀 NUEVO CLIENTE - Digitalización de Negocio">
+                        <input type="hidden" name="_language" value="es">
+                        <input type="hidden" name="_next" value="https://tusitio.com/gracias.html">
+                        
                         <div class="form-group">
-                            <input type="text" placeholder="Tu nombre" required>
+                            <input type="text" 
+                                   name="nombre" 
+                                   placeholder="Tu nombre *" 
+                                   required>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="Tu email" required>
+                            <input type="email" 
+                                   name="email" 
+                                   placeholder="Tu email *" 
+                                   required>
                         </div>
                         <div class="form-group">
-                            <input type="tel" placeholder="Tu WhatsApp">
+                            <input type="tel" 
+                                   name="whatsapp" 
+                                   placeholder="Tu WhatsApp (opcional)">
                         </div>
                         <div class="form-group">
-                            <select required>
-                                <option value="" disabled selected>¿Qué tipo de negocio tienes?</option>
-                                <option>Tienda/Comercio</option>
-                                <option>Restaurante/Cafetería</option>
-                                <option>Servicios (peluquería, taller, etc.)</option>
-                                <option>Consultoría/Profesional</option>
-                                <option>Otro</option>
+                            <select name="tipo_negocio" required>
+                                <option value="" disabled selected>¿Qué tipo de negocio tienes? *</option>
+                                <option value="Tienda/Comercio">Tienda/Comercio</option>
+                                <option value="Restaurante/Cafetería">Restaurante/Cafetería</option>
+                                <option value="Servicios">Servicios (peluquería, taller, etc.)</option>
+                                <option value="Consultoría/Profesional">Consultoría/Profesional</option>
+                                <option value="Otro">Otro</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <select required>
-                                <option value="" disabled selected>¿Cuál es tu mayor problema?</option>
-                                <option>Control de inventario</option>
-                                <option>Gestión de ventas</option>
-                                <option>Organización de clientes</option>
-                                <option>Facturación/Contabilidad</option>
-                                <option>Otro</option>
+                            <select name="problema_principal" required>
+                                <option value="" disabled selected>¿Cuál es tu mayor problema? *</option>
+                                <option value="Control de inventario">Control de inventario</option>
+                                <option value="Gestión de ventas">Gestión de ventas</option>
+                                <option value="Organización de clientes">Organización de clientes</option>
+                                <option value="Facturación/Contabilidad">Facturación/Contabilidad</option>
+                                <option value="Otro">Otro</option>
                             </select>
                         </div>
-                        <button type="submit" class="btn btn-primary">Solicitar consulta gratis</button>
+                        <div class="form-group">
+                            <textarea name="detalles" 
+                                      rows="3" 
+                                      placeholder="Cuéntame más detalles de lo que necesitas..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Solicitar consulta gratis
+                        </button>
+                        <p class="form-note">Te contactaré en menos de 24 horas</p>
                     </form>
                 </div>
+                
+                <!-- Opción Reparación -->
+                <div id="contacto-reparacion" class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Necesito reparar mis celulares</h3>
+                    <form class="contact-form" 
+                          id="form-repair" 
+                          action="https://formspree.io/f/TU-CODIGO-REPARACION-AQUI" 
+                          method="POST">
+                        
+                        <!-- Campos ocultos para Formspree -->
+                        <input type="hidden" name="_subject" value="🔧 NUEVO CLIENTE - Reparación de Celulares">
+                        <input type="hidden" name="_language" value="es">
+                        <input type="hidden" name="_next" value="https://tusitio.com/gracias.html">
+                        
+                        <div class="form-group">
+                            <input type="text" 
+                                   name="nombre" 
+                                   placeholder="Tu nombre *" 
+                                   required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" 
+                                   name="whatsapp" 
+                                   placeholder="Tu WhatsApp *" 
+                                   required>
+                        </div>
+                        <div class="form-group">
+                            <select name="dispositivo" required>
+                                <option value="" disabled selected>¿Qué dispositivo es? *</option>
+                                <option value="iPhone">iPhone</option>
+                                <option value="Android Samsung">Android Samsung</option>
+                                <option value="Android Xiaomi">Android Xiaomi</option>
+                                <option value="Android Otro">Android Otro</option>
+                                <option value="Tablet">Tablet</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select name="problema" required>
+                                <option value="" disabled selected>¿Qué problema tiene? *</option>
+                                <option value="Pantalla rota">Pantalla rota</option>
+                                <option value="No enciende">No enciende</option>
+                                <option value="Problema de carga">Problema de carga</option>
+                                <option value="Falla de software">Falla de software</option>
+                                <option value="Recuperación de datos">Recuperación de datos</option>
+                                <option value="Batería dañada">Batería dañada</option>
+                                <option value="Otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select name="urgencia">
+                                <option value="" disabled selected>¿Urgencia del servicio?</option>
+                                <option value="Urgente (hoy/mañana)">Urgente (hoy/mañana)</option>
+                                <option value="Esta semana">Esta semana</option>
+                                <option value="Cuando haya disponibilidad">Cuando haya disponibilidad</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="descripcion" 
+                                      rows="2" 
+                                      placeholder="Describe el problema con más detalle..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-secondary">
+                            <i class="fas fa-tools"></i> Solicitar diagnóstico
+                        </button>
+                        <p class="form-note">Responderé en menos de 1 hora por WhatsApp</p>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Información de contacto -->
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <div>
+                        <h4>WhatsApp directo</h4>
+                        <p>+58 414 356 8666 - Respuesta en menos de 1 hora</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Zona de servicio</h4>
+                        <p>Caracas - Atendemos en esta zona y aledañas</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h4>Horario de atención</h4>
+                        <p>Lunes a Viernes: 9am - 6pm | Sábados: 10am - 2pm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
                 
                 <!-- Opción Reparación -->
                 <div id="contacto-reparacion" class="contact-card">
